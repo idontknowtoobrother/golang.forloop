@@ -15,6 +15,10 @@ func main() {
 
 	fmt.Println("\nfound:", findTillFoundString(players, "Doe"))
 	fmt.Println("\nfound:", findTillFoundString(players, "Keng"))
+
+	fmt.Println("\nfound:", isStrInData(players, "Doe"))
+	fmt.Println("\nfound:", isStrInData(players, "Keng"))
+
 }
 
 func forLoopIndex() {
@@ -58,6 +62,16 @@ func findTillFoundString(data []string, findStr string) (found bool) {
 		if found {
 			break
 		}
+	}
+	return found
+}
+
+func isStrInData(data []string, findStr string) (found bool) {
+	found = false
+	length := len(data) - 1
+	for !found && length >= 0 {
+		found = data[length] == findStr
+		length--
 	}
 	return found
 }
