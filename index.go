@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	forLoopIndex()
@@ -9,6 +11,7 @@ func main() {
 
 	players := []string{"John", "Doe", "Jane"}
 	forEachWatchValue(players)
+	forEachWatchOnlyValue(players)
 }
 
 func forLoopIndex() {
@@ -36,5 +39,11 @@ func whileLoopPrePlusIndex() {
 func forEachWatchValue(data []string) {
 	for index, value := range data {
 		fmt.Printf("\nindex at %d, value is %s", index, value)
+	}
+}
+
+func forEachWatchOnlyValue(data []string) {
+	for _, value := range data {
+		fmt.Printf("\nitem: %s", value)
 	}
 }
