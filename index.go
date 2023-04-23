@@ -6,6 +6,9 @@ func main() {
 	forLoopIndex()
 	whileLoopPostPlusIndex()
 	whileLoopPrePlusIndex()
+
+	players := []string{"John", "Doe", "Jane"}
+	forEachWatchValue(players)
 }
 
 func forLoopIndex() {
@@ -27,5 +30,11 @@ func whileLoopPrePlusIndex() {
 	for i < 10 {
 		i++ // pre plus
 		fmt.Printf("\nindex at %d", i)
+	}
+}
+
+func forEachWatchValue(data []string) {
+	for index, value := range data {
+		fmt.Printf("\nindex at %d, value is %s", index, value)
 	}
 }
