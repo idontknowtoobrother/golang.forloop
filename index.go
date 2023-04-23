@@ -19,6 +19,7 @@ func main() {
 	fmt.Println("\nfound:", isStrInData(players, "Doe"))
 	fmt.Println("\nfound:", isStrInData(players, "Keng"))
 
+	fmt.Printf("\nget destination at: %d", plusTillDestination(15))
 }
 
 func forLoopIndex() {
@@ -74,4 +75,12 @@ func isStrInData(data []string, findStr string) (found bool) {
 		length--
 	}
 	return found
+}
+
+func plusTillDestination(destination int) (res int) {
+	res = 0
+	for res < destination {
+		res++
+	}
+	return res
 }
