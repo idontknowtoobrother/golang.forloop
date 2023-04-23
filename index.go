@@ -12,6 +12,9 @@ func main() {
 	players := []string{"John", "Doe", "Jane"}
 	forEachWatchValue(players)
 	forEachWatchOnlyValue(players)
+
+	fmt.Println("\nfound:", findTillFoundString(players, "Doe"))
+	fmt.Println("\nfound:", findTillFoundString(players, "Keng"))
 }
 
 func forLoopIndex() {
@@ -46,4 +49,15 @@ func forEachWatchOnlyValue(data []string) {
 	for _, value := range data {
 		fmt.Printf("\nitem: %s", value)
 	}
+}
+
+func findTillFoundString(data []string, findStr string) (found bool) {
+	found = false
+	for _, str := range data {
+		found = str == findStr
+		if found {
+			break
+		}
+	}
+	return found
 }
